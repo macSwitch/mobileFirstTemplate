@@ -613,11 +613,10 @@ footer {
       max-width: 62.5rem;
       @include clearfix();
     }
-.extra {
-  height: 20px;
-  background-color: #ccc;
-  text-align: center;
-}
+    .extra {
+      height: 20px;
+      text-align: center;
+    }
 // Rows and Coloumns
   .row {
     width: 100%;
@@ -639,26 +638,84 @@ footer {
 // First and Last for IE8
 .first {
   margin-left: 0;
-}
-.last {
-//
-}   
+} 
 
 //Colours
-
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.purple {
+  background-color: purple;
+}
+.orange {
+  background-color: orange;
+}
 /*=====================================================================================
   3. Header Styles  ===================================================================
 =====================================================================================*/
 
 /*-------------------------------------------------------------------------
   3a. General Header Styles ---------------------------------------------*/
-.headerContainer {
+.headerOuter {
+  background: #1c1c1c;
+  padding: 15px 20px;
+  @include clearfix();
 
+  &.container {
+    @include clearfix();
+  }
 }
 
 /*-------------------------------------------------------------------------
   3b. Header Logo Styles ------------------------------------------------*/
 
+.headerOuter h1 {
+  display: inline;
+}
+h1.logo a {
+  color: #d8d8d8;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 22px;
+  float: left;
+  letter-spacing: 0.2em;
+  display: inline;
+}
+.menuButton {
+  height: 22px;
+  background-color: #4e4e4e;
+  color: #fff;
+  float: right;
+  text-decoration: none;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 11px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+
+  &:hover {
+    color: #1c1c1c;
+    background-color: #ccc; 
+  }
+}
 
 /*=====================================================================================
   4. Nav/Menu Styles  =================================================================
@@ -666,7 +723,37 @@ footer {
 
 /*-------------------------------------------------------------------------
   4a. General Nav Styles ------------------------------------------------*/
-
+.navOuter {
+  width: 100%;
+}
+.primaryNav {
+  display: none;
+  ul {
+    margin: 0;
+    list-style: none;
+    background-color: #1c1c1c;
+    padding: 5px 0;
+  }
+  li a {
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+    border-bottom: 1px solid #383838;
+    &:hover {
+      color: #1c1c1c;
+      background-color: #ccc;
+    }
+  }
+  &.last a {
+    border-bottom: none;
+  }
+}
 
 /*=====================================================================================
   5. Main Content Styles  =============================================================
@@ -741,7 +828,7 @@ footer {
 
 
 
-} /* Tablet Media Ends */
+} /* mobile Landscape Ends */
 
 
 @media (min-width: 640px) { 
@@ -750,9 +837,35 @@ footer {
 ======================================================================================
 
 1. General/Re-usable CSS Styles -----------------------------------------------------
-  1a. Re-Usable Styles
+  1a. Re-Usable Styles */
 
-=======================================================================================
+// Widths
+.three {
+  width: 32%;
+  margin-left: 2%;
+  &.last {
+    width: 32%;
+    margin-left: 2%;
+  }
+}
+.four {
+  width: 49% !important;
+  margin-left: 2%;
+}
+.five {
+  width: 23.5%;
+  margin-left: 2% !important;
+  &.first {
+    margin-left: 0 !important;
+  }
+  &.last {
+    width: 100%;
+    margin-left: 0 !important;
+  }
+}
+
+
+/*=====================================================================================
 =====================================================================================*/
 
 /*=====================================================================================
@@ -765,37 +878,13 @@ footer {
   // Widths
 
 
-} /* Mobile Landscape Media Ends */
+} /* Tablet Media Ends */
 
 
 @media (min-width: 769px) { 
 /* ===================================================================================
-    Mobile Portrait Table Of Contents    =============================================
+    Widescreen Table Of Contents    ==================================================
 ====================================================================================*/
-
-// 1. General/Re-usable CSS Styles ---------------------------------------------------
-//  1a. Re-Usable Styles
-    .one {
-      width: 100%;
-    }
-    .two {
-      width: 49%;
-    }
-    .three {
-      width: 32%;
-    }
-    .four {
-      width: 23.5%;
-    }
-    .five {
-      width: 18.4%;
-    }
-    .six {
-      width: 15%;
-    }
-    
-/* ==================================================================================
-=====================================================================================*/
 
 /*=====================================================================================
   1. Re-usable CSS  ===================================================================
@@ -803,7 +892,41 @@ footer {
 
 /*-------------------------------------------------------------------------
   1a. Re-usable Styles --------------------------------------------------*/
-  
+     .three {
+      margin-left: 2%;
+      &.first {
+        margin-left: 0 !important;
+      }
+    }
+
+    .four {
+      width: 23.5% !important;
+      margin-left: 2% !important;
+
+      &.first {
+        margin-left: 0 !important;
+      }
+    }
+    .five {
+      width: 18.4% !important;
+      margin-left: 2% !important;
+      &.first {
+        margin-left: 0 !important;
+      }
+      &.last {
+        margin-left: 2% !important;
+      }
+    }
+    .six {
+      width: 15%;
+      margin-left: 2%;
+      &.first {
+        margin-left: 0;
+      }
+      &.odd {
+        margin-left: 2%;
+      }
+    } 
 
 /*=====================================================================================
   4. Nav/Menu Styles  =================================================================
@@ -811,10 +934,37 @@ footer {
 
 /*-------------------------------------------------------------------------
   4a. General Nav Styles ------------------------------------------------*/
+.menuButton {
+  display: none;
+}
+.navOuter {
+  width: 100%;
+  background-color: #1c1c1c;
+}
+.primaryNav {
+  display: block;
+  text-align: center;
+  @include clearfix();
+  ul {
+    margin: 0 auto;
+    height: 2.5em;
+    text-align: center;
+  }
+  ul li {
+    display: inline;
+  }
+  li a {
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 2em;
+    height: 2em;
+    border-bottom: none;
+    &:hover {
+      color: #1c1c1c;
+      background-color: #ccc;
+    }
+  }
+}
+  
 
-
-/*-------------------------------------------------------------------------
-  4b. Nav Menu Icon Styles ------------------------------------------------*/
-
-
-} /* Mobile Portrait Media Ends */
+} /* Widescreen Media Ends */

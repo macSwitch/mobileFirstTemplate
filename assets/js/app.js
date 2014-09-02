@@ -104,4 +104,9 @@ jQuery(document).ready(function($) {
       return false;
   });
 
+  // Mobile menu button
+  $('.menuButton').on('click', function () {
+    $('.primaryNav').slideToggle();
+  });
+
 });
