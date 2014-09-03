@@ -8,7 +8,7 @@
 <body id="top" data-ajax="false">
 <?php require('assets/includes/inc_clicks_header.php');?>
 
-<?php require('assets/includes/inc_header_container.php');?>
+<?php // require('assets/includes/inc_header_container.php');?>
 
 <?php require('assets/includes/inc_primary_nav.php');?>
 	

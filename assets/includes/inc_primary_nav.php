@@ -1,5 +1,8 @@
 <div class="navOuter">
 	<div class="container">
+		<div class="button-container">
+			<a class="menuButton" href="#"></a>
+		</div>
 		<nav class="primaryNav">
 			<ul>
 				<li><a href="#">Something</a></li>
